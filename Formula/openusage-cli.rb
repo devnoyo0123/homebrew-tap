@@ -8,7 +8,7 @@ class OpenusageCli < Formula
   depends_on "node"
 
   def install
-    bin.install "cli.js" => "openusage"
+    bin.install "cli.js" => "openusage-cli"
   end
 
   def caveats
@@ -19,6 +19,6 @@ class OpenusageCli < Formula
   end
 
   test do
-    assert_match "OpenUsage CLI", shell_output("#{bin}/openusage help")
+    assert_match "OpenUsage CLI", shell_output("#{bin}/openusage-cli help")
   end
 end
